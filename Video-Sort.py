@@ -10,7 +10,7 @@ from pathlib import Path
 DEBUG = True
 
 def sort(fileName, ext):
-	x = [fileName[0:3],fileName[5:6]]
+	x = [fileName[0:3],fileName[5:7], fileName[9:11]]
 	print (x)
 	#date = datetime(fileName) 
 	#print (date)
