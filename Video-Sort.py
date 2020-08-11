@@ -25,7 +25,7 @@ def sort(fileName, ext, file):
 		else:
 			print(Path(start)/date + " does not exist")
 			os.mkdir(date)
-		shutil(file, date/file)
+		shutil.move(Path(start)/file, Path(start)/date/file)
 
 
 o = os.listdir(start)
