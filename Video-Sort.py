@@ -20,7 +20,7 @@ def sort(fileName, ext):
 		date = datetime(year, month, day)
 		date = date.strftime("%B %dth") 
 		print (date)
-		if Path(start/F).is_dir():
+		if Path(start/date).is_dir():
 			print("folder found")
 		else:
 			print("folder does not exist")
