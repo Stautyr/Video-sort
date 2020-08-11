@@ -19,7 +19,7 @@ def sort(fileName, ext, file):
 		month = int(x[1])
 		day = int(x[2])
 		date = datetime(year, month, day)
-		date = date.strftime("%B %dth Clips") 
+		date = date.strftime("%B %dth Clips")
 		print (date)
 		if (Path(start)/date).is_dir():
 			if (DEBUG):
@@ -29,7 +29,6 @@ def sort(fileName, ext, file):
 				print(str(Path(start)/date) + " does not exist")
 			os.mkdir(date)
 		shutil.move(Path(start)/file, Path(start)/date/file)
-
 
 o = os.listdir(start)
 for x in range(len(o)):
