@@ -8,6 +8,7 @@ import os
 import shutil
 from pathlib import Path
 DEBUG = False
+
 start = "F:\\Gameplay\\VODS"
 os.chdir(start)
 
@@ -21,9 +22,11 @@ def sort(fileName, ext, file):
 		date = date.strftime("%B %dth Clips") 
 		print (date)
 		if (Path(start)/date).is_dir():
-			print("folder found")
+			if (DEBUG):
+				print("folder found")
 		else:
-			print(Path(start)/date + " does not exist")
+			if (DEBUG):
+				print(Path(start)/date + " does not exist")
 			os.mkdir(date)
 		shutil.move(Path(start)/file, Path(start)/date/file)
 
