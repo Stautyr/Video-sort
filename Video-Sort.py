@@ -7,6 +7,11 @@ import datetime
 import os
 import shutil
 from pathlib import Path
+DEBUG = True
+
+def sort(fileName, ext):
+	date = datetime(fileName) 
+	print date
 
 start = "F:\\Gameplay\\VODS"
 os.chdir(start)
@@ -15,5 +20,7 @@ for x in range(len(o)):
 	file = o[x]
 	fileName = os.path.splitext(file)[0]
 	ext = os.path.splitext(file)[1].lower()
-	print (fileName)
-	print (ext)
+	if (DEBUG):
+		print (fileName)
+		print (ext)
+	sort(fileName, ext)
