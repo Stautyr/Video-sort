@@ -8,6 +8,8 @@ import os
 import shutil
 from pathlib import Path
 DEBUG = False
+start = "F:\\Gameplay\\VODS"
+os.chdir(start)
 
 def sort(fileName, ext):
 	if (ext == ".m4a" or ext == ".mp4"):
@@ -16,11 +18,15 @@ def sort(fileName, ext):
 		month = int(x[1])
 		day = int(x[2])
 		date = datetime(year, month, day)
-		date.strftime("%B %dth") 
+		date = date.strftime("%B %dth") 
 		print (date)
+		if Path(start/F).is_dir():
+			print("folder found")
+		else:
+			print("folder does not exist")
 
-start = "F:\\Gameplay\\VODS"
-os.chdir(start)
+
+
 o = os.listdir(start)
 for x in range(len(o)):
 	file = o[x]
