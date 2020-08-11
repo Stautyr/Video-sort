@@ -26,7 +26,7 @@ def sort(fileName, ext, file):
 				print("folder found")
 		else:
 			if (DEBUG):
-				print(Path(start)/date + " does not exist")
+				print(str(Path(start)/date) + " does not exist")
 			os.mkdir(date)
 		shutil.move(Path(start)/file, Path(start)/date/file)
 
