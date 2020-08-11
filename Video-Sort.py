@@ -8,7 +8,7 @@ import os
 import shutil
 from pathlib import Path
 
-start = "F:\\Gameplay"
+start = "F:\\Gameplay\\VODS"
 os.chdir(start)
 o = os.listdir(start)
 for x in range(len(o)):
