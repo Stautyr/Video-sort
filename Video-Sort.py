@@ -18,12 +18,13 @@ def sort(fileName, ext):
 		month = int(x[1])
 		day = int(x[2])
 		date = datetime(year, month, day)
-		date = date.strftime("%B %dth") 
+		date = date.strftime("%B %dth Clips") 
 		print (date)
-		if Path(start/date).is_dir():
+		if (Path(start)/date).is_dir():
 			print("folder found")
 		else:
-			print("folder does not exist")
+			print(Path(start)/date + " does not exist")
+			os.mkdir(date)
 
 
 
