@@ -13,5 +13,5 @@ os.chdir(start)
 o = os.listdir(start)
 for x in range(len(o)):
 	file = o[x]
-	ext = os.path.splitext(file)[-1].lower()
+	ext = os.path.splitext(file)[0]
 	print (ext)
