@@ -8,10 +8,8 @@ import os
 import shutil
 from pathlib import Path
 
-
-
-
-start = Path("F:/Gameplay")
+start = "F:\\Gameplay"
+os.chdir(start)
 o = os.listdir(start)
 for x in range(len(o)):
 	file = o[x]
