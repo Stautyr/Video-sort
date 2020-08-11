@@ -11,7 +11,7 @@ DEBUG = False
 start = "F:\\Gameplay\\VODS"
 os.chdir(start)
 
-def sort(fileName, ext):
+def sort(fileName, ext, file):
 	if (ext == ".m4a" or ext == ".mp4"):
 		x = [fileName[0:4],fileName[5:7], fileName[8:10]]
 		year = int(x[0])
@@ -25,7 +25,7 @@ def sort(fileName, ext):
 		else:
 			print(Path(start)/date + " does not exist")
 			os.mkdir(date)
-
+		shutil(file, date/file)
 
 
 o = os.listdir(start)
@@ -36,4 +36,4 @@ for x in range(len(o)):
 	if (DEBUG):
 		print (fileName)
 		print (ext)
-	sort(fileName, ext)
+	sort(fileName, ext, file)
