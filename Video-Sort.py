@@ -10,11 +10,12 @@ from pathlib import Path
 DEBUG = True
 
 def sort(fileName, ext):
-	x = [fileName[0:4],fileName[5:7], fileName[9:11]]
-	year = x[0]
-	month = x[1]
-	day = x[2]
-	date = datetime(year, month, day) 
+	x = [fileName[0:4],fileName[5:7], fileName[8:10]]
+	year = int(x[0])
+	month = int(x[1])
+	day = int(x[2])
+	date = datetime(year, month, day)
+	date.strftime(%B, %d) 
 	print (date)
 
 start = "F:\\Gameplay\\VODS"
