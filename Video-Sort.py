@@ -3,15 +3,17 @@
 # Python Version: 3.7.3     #
 # Date: 8-10-2020           #
 #############################
-import datetime
+from datetime import datetime
 import os
 import shutil
 from pathlib import Path
 DEBUG = True
 
 def sort(fileName, ext):
-	date = datetime(fileName) 
-	print date
+	x = [fileName[0:3],fileName[5:6]]
+	print (x)
+	#date = datetime(fileName) 
+	#print (date)
 
 start = "F:\\Gameplay\\VODS"
 os.chdir(start)
