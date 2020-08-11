@@ -7,7 +7,7 @@ from datetime import datetime
 import os
 import shutil
 from pathlib import Path
-DEBUG = True
+DEBUG = False
 
 def sort(fileName, ext):
 	if (ext == ".m4a" or ext == ".mp4"):
@@ -16,7 +16,7 @@ def sort(fileName, ext):
 		month = int(x[1])
 		day = int(x[2])
 		date = datetime(year, month, day)
-		date.strftime(%B, %d) 
+		date.strftime("%B %dth") 
 		print (date)
 
 start = "F:\\Gameplay\\VODS"
