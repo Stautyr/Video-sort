@@ -9,7 +9,7 @@ import shutil
 from pathlib import Path
 DEBUG = False
 
-start = "F:\\Gameplay\\VODS"
+start = "" #Insert starting directory like "C:\\Video"
 os.chdir(start)
 
 def sort(fileName, ext, file):
